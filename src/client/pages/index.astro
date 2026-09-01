@@ -1,11 +1,30 @@
 ---
-import Hello from "../components/Hello.astro";
+import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import { SignUp } from "../components/SignUp";
+import Card from "../components/Card.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Hello />
+  <Hero />
+  <div class="flex justify-center p-4">
+    <SignUp />
+  </div>
+  <div class="space-y-6 p-4 md:flex md:justify-center md:gap-4 md:space-y-0">
+    <Card
+      title="Get Interview Ready"
+      description="Need to brush up on your JavaScript skills"
+    />
+    <Card
+      title="Review AI Slop Faster"
+      description="Spending too muchtime reading AI generated code? This platform teach you the ins and outs"
+    />
+    <Card
+      title="Code Faster"
+      description="Build muscle memory so you can code faster"
+    />
+  </div>
 </Layout>
